@@ -307,6 +307,7 @@ footer p{font-size:0.9rem;}
 
 </div>
   <div style="margin-top:16px;">
+  <div style="margin-top:16px;">
   <a
     href="https://forms.gle/idZoSrgncYgMgDYh9"
     target="_blank"
@@ -323,14 +324,23 @@ footer p{font-size:0.9rem;}
       border-radius:10px;
       text-decoration:none;
       box-shadow:0 6px 16px rgba(15,98,254,0.25);
+      animation:floatBtn 2.5s ease-in-out infinite;
       transition:transform 0.15s ease, box-shadow 0.15s ease;
     "
-    onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 10px 22px rgba(15,98,254,0.35)';"
-    onmouseout="this.style.transform='none';this.style.boxShadow='0 6px 16px rgba(15,98,254,0.25)';"
+    onmouseover="this.style.animation='none';this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 22px rgba(15,98,254,0.35)';"
+    onmouseout="this.style.animation='floatBtn 2.5s ease-in-out infinite';this.style.transform='none';this.style.boxShadow='0 6px 16px rgba(15,98,254,0.25)';"
   >
     📞 Request a Call Back
   </a>
 </div>
+
+<style>
+@keyframes floatBtn {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+</style>
   <p style="margin-top:12px;color:var(--muted);">
     Contact for free eligibility check & best card recommendation
   </p>
